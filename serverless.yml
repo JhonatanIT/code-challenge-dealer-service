@@ -12,6 +12,11 @@ provider:
   runtime: nodejs18.x
   stage: dev
   region: us-west-2
+plugins:
+  - serverless-offline
+package:
+  exclude:
+    - node_modules/**
 
 # you can add statements to the Lambda function's IAM Role here
 #  iam:
@@ -36,10 +41,26 @@ provider:
 #    variable1: value1
 
 functions:
-  dealer:
-    handler: src/handler.getDealerList
-    timeout: 5 
-    memorySize: 128 
+  get-dealers:
+    handler: src/handler.getDealers
+    timeout: 10
+    memorySize: 128
+    events:
+      - httpApi: 
+          path: /dealers
+          method: get
+  get-vehicles-by-bac:
+    handler: src/handler.getVehiclesByBac
+    timeout: 10
+    memorySize: 128
+    events:
+      - httpApi: 
+          path: /vehicles/{bac}
+          method: get
+#     - http: ANY /
+#     - http: ANY /{proxy+}
+
+    
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details

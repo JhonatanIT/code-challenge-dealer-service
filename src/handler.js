@@ -1,18 +1,32 @@
 'use strict';
 
-module.exports.getDealerList = async (event) => {
+const headers = {
+  "content-type": "application/json",
+};
+
+module.exports.getDealers = async (event) => {
   return {
     statusCode: 200,
+    headers,
     body: JSON.stringify(
       {
-        message: 'Go Serverless v1.0! Your function executed successfully!',
-        input: event,
-      },
-      null,
-      2
+        message: 'Go Serverless getDealers!'
+      }
     ),
   };
+};
 
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
+module.exports.getVehiclesByBac = async (event) => {
+
+  const { bac } = event.pathParameters
+
+  return {
+    statusCode: 200,
+    headers,
+    body: JSON.stringify(
+      {
+        message: 'Go Serverless getVehiclesByBac! ' + bac 
+      }
+    ),
+  };
 };

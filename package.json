@@ -1,0 +1,18 @@
+{
+  "name": "code-challenge-dealer-service",
+  "version": "1.0.0",
+  "description": "Serverless microservice to expose dealers and vehicles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "offline": "serverless offline start",
+    "deploy": "serverless deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serverless": "^3.31.0",
+    "serverless-offline": "^12.0.4"
+  }
+}
