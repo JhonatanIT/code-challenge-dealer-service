@@ -4,7 +4,7 @@
   "description": "Serverless microservice to expose dealers and vehicles",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "offline": "serverless offline start",
     "deploy": "serverless deploy"
   },
@@ -12,7 +12,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node-fetch": "^2.6.11",
     "serverless": "^3.31.0",
-    "serverless-offline": "^12.0.4"
+    "serverless-offline": "^12.0.4",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "serverless-plugin-common-excludes": "^4.0.0",
+    "serverless-plugin-include-dependencies": "^5.1.0"
   }
 }

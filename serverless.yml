@@ -14,9 +14,11 @@ provider:
   region: us-west-2
 plugins:
   - serverless-offline
-package:
-  exclude:
-    - node_modules/**
+  - serverless-plugin-common-excludes         # this should go before serverless-plugin-include-dependencies
+  - serverless-plugin-include-dependencies
+#package:
+#  exclude:
+#    - node_modules/**
 
 # you can add statements to the Lambda function's IAM Role here
 #  iam:

@@ -6,7 +6,12 @@ Serverless microservice to expose dealers and vehicles
     npm init -y
     npm install serverless
     npm install serverless-offline
+    npm install node-fetch@2
+    npm install yup
+    npm install jest --save-dev
+    npm install serverless-plugin-include-dependencies --save-dev
     serverless create --template aws-nodejs
+    serverless plugin install -n serverless-plugin-common-excludes
     
 ## Deploy manually in AWS
 
