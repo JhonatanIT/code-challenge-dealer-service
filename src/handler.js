@@ -30,6 +30,8 @@ const schemaVehicles = yup.object().shape({
 
 const headers = {
   "content-type": "application/json",
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET'
 };
 
 const DEALERS_URI = 'https://bb61co4l22.execute-api.us-west-2.amazonaws.com/development/dealers';

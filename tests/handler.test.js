@@ -2,6 +2,8 @@ const handler = require('../src/handler')
 
 const headers = {
     "content-type": "application/json",
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET'
 };
 
 describe('Dealers Tests', () => {
