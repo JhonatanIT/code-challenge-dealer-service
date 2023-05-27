@@ -1,6 +1,13 @@
 # code-challenge-dealer-service
 Serverless microservice to expose dealers and vehicles
 
+## API Gateway Endpoints
+
+![API Gateway Endpoints](https://i.imgur.com/wlDhr6P.png)
+
+    GET - https://9tjf6hha91.execute-api.us-west-2.amazonaws.com/dealers
+    GET - https://9tjf6hha91.execute-api.us-west-2.amazonaws.com/vehicles/{bac}
+
 ## Install and set-up a project
 
     npm init -y
