@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.6.11",
-    "serverless": "^3.31.0",
+    "serverless": "^4.0.0",
     "serverless-offline": "^13.0.0",
     "yup": "^1.2.0"
   },
